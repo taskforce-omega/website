@@ -87,9 +87,6 @@ git add .
 git commit -m "your message"
 git push
 ~~~
-
-> Using WebStorm? `Ctrl+K` opens the commit window — commit and push in one step without leaving the editor.
-
 ---
 
 ## Community
