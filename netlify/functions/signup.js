@@ -66,7 +66,10 @@ exports.handler = async function(event) {
     const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ embeds: [embed] })
+        body: JSON.stringify({
+            content: '<@&876416680291598406> New signup incoming.',
+            embeds: [embed]
+        })
     });
 
     if (!res.ok) return { statusCode: 500, body: 'Discord webhook failed' };
