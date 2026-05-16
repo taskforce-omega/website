@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#862021">
+    <title>Gallery - Task Force Omega</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="tfo-emoji.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- SEO & Social Sharing -->
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Moments captured from Task Force Omega operations. Browse our collection of screenshots from Arma 3 missions across all theaters.">
+    <link rel="canonical" href="https://taskforceomega.eu/gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Task Force Omega">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taskforceomega.eu/gallery.html">
+    <meta property="og:title" content="TFO Gallery — Operation Screenshots">
+    <meta property="og:description" content="Moments captured from Task Force Omega operations. Browse screenshots from our Arma 3 missions.">
+    <meta property="og:image" content="https://taskforceomega.eu/assets/img/og/og-gallery.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TFO Gallery — Operation Screenshots">
+    <meta name="twitter:description" content="Moments captured from Task Force Omega operations. Browse screenshots from our Arma 3 missions.">
+    <meta name="twitter:image" content="https://taskforceomega.eu/assets/img/og/og-gallery.jpg">
+</head>
+
+<body>
+
+<!-- Dust particles -->
+<div class="dust-container" id="dustContainer"></div>
+
+
+<!-- ================================================
+     NAVIGATION
+================================================ -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="tfo-emoji.png" alt="Task Force Omega Logo" class="logo-image">
+                <span class="logo-text">Task Force Omega</span>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="donate.html" class="nav-link">Donate</a>
+            <a href="shop.html" class="nav-link shop-link" data-default="Shop" data-hover="Coming soon">Shop</a>
+            <a href="join-us.html" class="nav-link highlight">How to join</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================================================
+     MAIN WRAPPER
+================================================ -->
+<div class="wrapper">
+
+    <!-- Hero -->
+    <section class="hero-section-1">
+        <div class="hero-content">
+            <h1>Operation Gallery</h1>
+            <div class="accent-line"></div>
+            <p>Moments captured from our operations across time and theaters</p>
+        </div>
+    </section>
+
+
+    <!-- ================================================
+         GALLERY GRID
+         Add new images below — each item needs:
+         data-img: full path to image
+         data-caption: lightbox caption text
+    ================================================ -->
+    <div class="content-wrapper">
+        <div class="gallery-grid">
+
+            <div class="gallery-item" data-img="gallery/107410_20240901163649_1.png" data-caption="Ukraine Operations | Task Force Omega displaying unit colors">
+                <img src="gallery/107410_20240901163649_1.png" alt="Ukraine Ops TFO Flag">
+                <div class="gallery-item-caption">Ukraine Operations</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/3.jpg" data-caption="Night Operations | Illumination flares lighting up the battlefield at extraction point">
+                <img loading="lazy" decoding="async" src="gallery/3.jpg" alt="Night Ops Flares">
+                <div class="gallery-item-caption">Night Ops - Illumination Flares</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20250609004430_1.png" data-caption="CDF (Chernarus Defence Forces) Operations | Task Force Omega with air support">
+                <img loading="lazy" decoding="async" src="gallery/107410_20250609004430_1.png" alt="CDF Ops Helicopter">
+                <div class="gallery-item-caption">CDF Ops - Air Support</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20241203194104_1.png" data-caption="Urban Night Operations | Italian SOF reconnaissance">
+                <img loading="lazy" decoding="async" src="gallery/107410_20241203194104_1.png" alt="Night Vision Ops">
+                <div class="gallery-item-caption">Night Operations - Italian SOF reconnaissance</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/Bastogne.png" data-caption="1944 - Battle of Bastogne | Task Force Omega defending the Ardennes">
+                <img loading="lazy" decoding="async" src="gallery/Bastogne.png" alt="Bastogne 1944">
+                <div class="gallery-item-caption">1944 - Battle of Bastogne</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20250330010902_1.png" data-caption="Ukraine Operations | Task Force Omega holding trenches">
+                <img loading="lazy" decoding="async" src="gallery/107410_20250330010902_1.png" alt="Ukraine Trench Ops">
+                <div class="gallery-item-caption">Ukraine Trench Operations</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/Colleville.png" data-caption="1944 - Normandy Campaign | Task Force Omega at Colleville-sur-mer">
+                <img loading="lazy" decoding="async" src="gallery/Colleville.png" alt="Normandy 1944">
+                <div class="gallery-item-caption">1944 - Normandy Campaign</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/20230323200001_1.jpg" data-caption="Neptune's Spear Operation | SEAL commando deployment">
+                <img loading="lazy" decoding="async" src="gallery/20230323200001_1.jpg" alt="SEAL Night Briefing">
+                <div class="gallery-item-caption">Neptune's Spear Operations</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/Foy.png" data-caption="1945 - Liberation of Foy, Belgium | Task Force Omega winter operations">
+                <img loading="lazy" decoding="async" src="gallery/Foy.png" alt="Foy Belgium 1945">
+                <div class="gallery-item-caption">1945 - Liberation of Foy</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/TFO-christmas2.png" data-caption="TFO Christmas Special | Holiday operations with festive spirit">
+                <img loading="lazy" decoding="async" src="gallery/TFO-christmas2.png" alt="TFO Christmas">
+                <div class="gallery-item-caption">TFO Christmas Special</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230529011034_1.png" data-caption="Underwater Special Operations | Combat divers conducting submerged mission">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230529011034_1.png" alt="Underwater Spec Ops">
+                <div class="gallery-item-caption">Underwater Special Operations</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230529192700_1.png" data-caption="ION Winter Warfare | Machine gun mounted on MRAP during cold weather operations">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230529192700_1.png" alt="Winter Warfare MG">
+                <div class="gallery-item-caption">Winter Warfare - ION MRAP with mounted MG</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230529214332_1.png" data-caption="Fast-Rope Insertion | Operator securing helicopter rope deployment">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230529214332_1.png" alt="Fast Rope Insertion">
+                <div class="gallery-item-caption">Fast-Rope Insertion</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230619191419_1.png" data-caption="Landing Zone Security | Operators securing helicopter insertion point">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230619191419_1.png" alt="LZ Security">
+                <div class="gallery-item-caption">Landing Zone Security</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20231202180843_1.png" data-caption="WWII - U.S. Armor Division | Sherman tanks preparing for assault">
+                <img loading="lazy" decoding="async" src="gallery/107410_20231202180843_1.png" alt="WWII US Tanks">
+                <div class="gallery-item-caption">WWII - U.S. Armor Division</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230908225223_1.png" data-caption="WWII - Night Briefing | 101st Airborne Division planning operation Overlord">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230908225223_1.png" alt="WWII Night Briefing">
+                <div class="gallery-item-caption">Operation Overlord - 101st Airborne Division</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20230929215932_1.png" data-caption="Modern Warfare | TFO private contractors engaging in urban combat">
+                <img loading="lazy" decoding="async" src="gallery/107410_20230929215932_1.png" alt="Modern Urban Combat">
+                <div class="gallery-item-caption">Modern Urban Combat</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/107410_20231216011929_1.png" data-caption="WW II | Task Force Omega patrol through Monthermé in French Ardennes">
+                <img loading="lazy" decoding="async" src="gallery/107410_20231216011929_1.png" alt="Ardennes Patrol">
+                <div class="gallery-item-caption">WW II - French Ardennes</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/20260208201238_1.jpg" data-caption="Modern Warfare | Specter Company reduces the refinery to a burning ruin">
+                <img loading="lazy" decoding="async" src="gallery/20260208201238_1.jpg" alt="Specter Company Urban Warfare">
+                <div class="gallery-item-caption">Specter Company - Urban warfare</div>
+            </div>
+
+            <div class="gallery-item" data-img="gallery/20260210225751_1.jpg" data-caption="US Marines and Iraqi troops clearing houses during the second battle of Fallujah">
+                <img loading="lazy" decoding="async" src="gallery/20260210225751_1.jpg" alt="US Marines and Iraqi troops in Fallujah">
+                <div class="gallery-item-caption">US Marines and Iraqi troops in Fallujah</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- CTA -->
+    <div class="content-wrapper">
+        <div class="cta-container">
+            <h2>Ready to Join the Fight?</h2>
+            <p>Become part of Task Force Omega and create your own legendary moments</p>
+            <a href="https://discord.gg/FuwCrJF" class="btn-discord">
+                <span>Join Our Discord</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ================================================
+         LIGHTBOX
+         Opened on gallery item click — navigable with
+         arrows and keyboard (← → Esc)
+    ================================================ -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">›</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Task Force Omega &copy; 2021-2026 | Every screenshot is a war crime waiting to be framed | <a href="legal.html">Legal Notices</a></p>
+    </footer>
+
+</div>
+<!-- End Main Wrapper -->
+
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script>
+    // Dust particles
+    const dustContainer = document.getElementById('dustContainer');
+    for (let i = 0; i < 50; i++) {
+        const dust = document.createElement('div');
+        dust.className = 'dust';
+        dust.style.left = Math.random() * 100 + '%';
+        dust.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        dust.style.animationDelay = Math.random() * 5 + 's';
+        dustContainer.appendChild(dust);
+    }
+
+    // Shop easter egg
+    function setupShopEasterEgg() {
+        const shopLink = document.querySelector('.shop-link');
+        if (!shopLink) return;
+
+        const defaultText = shopLink.dataset.default || 'Shop';
+        const hoverText   = shopLink.dataset.hover   || 'Coming soon';
+        let clicks = 0;
+
+        shopLink.addEventListener('mouseenter', () => {
+            if (clicks === 0) shopLink.textContent = hoverText;
+        });
+        shopLink.addEventListener('mouseleave', () => {
+            if (clicks === 0) shopLink.textContent = defaultText;
+        });
+        shopLink.addEventListener('click', (e) => {
+            clicks++;
+            if (clicks === 1) {
+                e.preventDefault();
+                shopLink.textContent = 'Coming soon';
+                shopLink.classList.add('shop-primed');
+            } else if (clicks === 2) {
+                e.preventDefault();
+                shopLink.textContent = 'COMING SOON';
+            }
+        });
+    }
+
+    // Lightbox
+    const lightbox       = document.getElementById('lightbox');
+    const lightboxImg    = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose  = document.getElementById('lightboxClose');
+    const lightboxPrev   = document.getElementById('lightboxPrev');
+    const lightboxNext   = document.getElementById('lightboxNext');
+    const galleryItems   = document.querySelectorAll('.gallery-item');
+    const galleryArray   = Array.from(galleryItems);
+    let currentIndex     = 0;
+
+    // Open on click
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            openLightbox(currentIndex);
+        });
+    });
+
+    function openLightbox(index) {
+        const item = galleryArray[index];
+        lightboxImg.src = item.getAttribute('data-img');
+        lightboxCaption.textContent = item.getAttribute('data-caption');
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        updateNavButtons();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            lightboxImg.src = '';
+            lightboxCaption.textContent = '';
+        }, 300);
+    }
+
+    // Dim nav arrows at first/last image
+    function updateNavButtons() {
+        lightboxPrev.style.opacity      = currentIndex === 0 ? '0.3' : '1';
+        lightboxPrev.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        lightboxNext.style.opacity      = currentIndex === galleryArray.length - 1 ? '0.3' : '1';
+        lightboxNext.style.pointerEvents = currentIndex === galleryArray.length - 1 ? 'none' : 'auto';
+    }
+
+    lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex > 0) { currentIndex--; openLightbox(currentIndex); }
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex < galleryArray.length - 1) { currentIndex++; openLightbox(currentIndex); }
+    });
+
+    lightboxClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeLightbox();
+    });
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft'  && currentIndex > 0)                        { currentIndex--; openLightbox(currentIndex); }
+        if (e.key === 'ArrowRight' && currentIndex < galleryArray.length - 1)  { currentIndex++; openLightbox(currentIndex); }
+    });
+
+    window.addEventListener('DOMContentLoaded', setupShopEasterEgg);
+</script>
+
+</body>
+</html>

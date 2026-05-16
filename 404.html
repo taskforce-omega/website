@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#862021">
+    <title>404 — Task Force Omega</title>
+
+    <link rel="shortcut icon" type="image/png" href="tfo-emoji.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+
+<div class="dust-container" id="dustContainer"></div>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="tfo-emoji.png" alt="Task Force Omega Logo" class="logo-image">
+                <div class="logo-text">Task Force Omega</div>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="donate.html" class="nav-link">Donate</a>
+            <a href="shop.html" class="nav-link shop-link" data-default="Shop" data-hover="Coming soon">Shop</a>
+            <a href="join-us.html" class="nav-link highlight">How to join</a>
+        </div>
+    </div>
+</nav>
+
+<div class="error-wrapper">
+    <span class="error-code" aria-hidden="true">404</span>
+
+    <div class="error-content">
+        <h1>Extraction Point Not Found</h1>
+        <div class="accent-line"></div>
+        <p class="lead">The helicopter was never coming.<br>Neither was this page, apparently.</p>
+        <p class="sub">Intel was bad. Zeus is probably laughing somewhere.</p>
+
+        <div class="error-actions">
+            <a href="index.html" class="btn-discord">Return to Base</a>
+            <a href="join-us.html" class="btn-ghost">Join the Unit</a>
+        </div>
+
+        <div class="classified-stamp" aria-hidden="true">Location Classified</div>
+    </div>
+</div>
+
+<script>
+    // Dust particles
+    const dustContainer = document.getElementById('dustContainer');
+    for (let i = 0; i < 50; i++) {
+        const dust = document.createElement('div');
+        dust.className = 'dust';
+        dust.style.left = Math.random() * 100 + '%';
+        dust.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        dust.style.animationDelay = Math.random() * 5 + 's';
+        dustContainer.appendChild(dust);
+    }
+
+    // Shop easter egg
+    function setupShopEasterEgg() {
+        const shopLink = document.querySelector('.shop-link');
+        if (!shopLink) return;
+        const defaultText = shopLink.dataset.default || 'Shop';
+        const hoverText   = shopLink.dataset.hover   || 'Coming soon';
+        let clicks = 0;
+        shopLink.addEventListener('mouseenter', () => { if (clicks === 0) shopLink.textContent = hoverText; });
+        shopLink.addEventListener('mouseleave', () => { if (clicks === 0) shopLink.textContent = defaultText; });
+        shopLink.addEventListener('click', (e) => {
+            clicks++;
+            if (clicks === 1) { e.preventDefault(); shopLink.textContent = 'Coming soon'; shopLink.classList.add('shop-primed'); }
+            else if (clicks === 2) { e.preventDefault(); shopLink.textContent = 'COMING SOON'; }
+        });
+    }
+    window.addEventListener('DOMContentLoaded', setupShopEasterEgg);
+
+    // Random 404 messages
+    const messages = [
+        {
+            title: "Extraction Point Not Found",
+            lead: "The helicopter was never coming.<br>Neither was this page, apparently.",
+            sub: "Intel was bad. Zeus is probably laughing somewhere."
+        },
+        {
+            title: "Wrong Grid Reference",
+            lead: "You've wandered outside the AO.<br>Command has no idea where you are.",
+            sub: "Neither do we, honestly."
+        },
+        {
+            title: "Page KIA",
+            lead: "This page was declared KIA at 0300.<br>No body recovery planned.",
+            sub: "Friendly fire is not excluded."
+        },
+        {
+            title: "CAS Requested. Page Denied.",
+            lead: "Your request has been logged.<br>It will be ignored within 3-5 business ops.",
+            sub: "Zeus has left the channel."
+        },
+        {
+            title: "OPORD Not Found",
+            lead: "The briefing for this page never happened.<br>Much like the debrief.",
+            sub: "Check your modlist. Probably your fault."
+        },
+        {
+            title: "Signal Lost",
+            lead: "Your radio operator wandered off again.<br>This page is out of range.",
+            sub: "Have you tried turning the radio off and on again?"
+        },
+        {
+            title: "Sector Compromised",
+            lead: "This page has been overrun.<br>Fall back to a known position.",
+            sub: "Do not engage. You are outnumbered."
+        },
+        {
+            title: "Zeus Intervention",
+            lead: "A higher power removed this page.<br>No explanation was given. None will be.",
+            sub: "It is what it is. Adapt."
+        },
+        {
+            title: "Mission Scrubbed",
+            lead: "This page was planned.<br>Then weather rolled in and command cancelled everything.",
+            sub: "Happens every time."
+        },
+        {
+            title: "Friendly Fire Incident",
+            lead: "Someone deleted this page.<br>An internal investigation is pending.",
+            sub: "No one will be held accountable."
+        },
+        {
+            title: "Awaiting Reinforcements",
+            lead: "This page was supposed to be here by now.<br>ETA is unknown. It always is.",
+            sub: "Reinforcements are 10 mikes out. They have been for an hour."
+        },
+        {
+            title: "BCT Failed",
+            lead: "This page didn't make it through Basic Combat Training.<br>Happens to the best of us.",
+            sub: "Try again. Or don't. Zeus doesn't care."
+        }
+    ];
+
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    document.querySelector('.error-content h1').textContent = msg.title;
+    document.querySelector('.error-content .lead').innerHTML = msg.lead;
+    document.querySelector('.error-content .sub').textContent = msg.sub;
+</script>
+
+</body>
+</html>

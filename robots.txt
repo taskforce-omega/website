@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /shop.html
+Disallow: /shop2.html
+Sitemap: https://taskforceomega.eu/sitemap.xml

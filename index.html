@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#862021">
+    <title>Task Force Omega - Semi-Milsim Arma 3 Unit</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="tfo-emoji.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- SEO & Social Sharing -->
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Task Force Omega is an international Arma 3 semi-milsim unit based in Europe. Join our chill yet tactical community for ops, training, and more.">
+    <link rel="canonical" href="https://taskforceomega.eu/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Task Force Omega">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taskforceomega.eu/">
+    <meta property="og:title" content="Task Force Omega — Semi-Milsim Arma 3 Unit">
+    <meta property="og:description" content="An international Arma 3 semi-milsim community. Serious ops, chill atmosphere. Join TFO today.">
+    <meta property="og:image" content="https://taskforceomega.eu/assets/img/og/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Task Force Omega — Semi-Milsim Arma 3 Unit">
+    <meta name="twitter:description" content="An international Arma 3 semi-milsim community. Serious ops, chill atmosphere. Join TFO today.">
+    <meta name="twitter:image" content="https://taskforceomega.eu/assets/img/og/og-home.jpg">
+
+    <!-- Structured Data — Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Task Force Omega",
+            "alternateName": "TFO",
+            "url": "https://taskforceomega.eu",
+            "logo": "https://taskforceomega.eu/tfo-emoji.png",
+            "description": "Task Force Omega is an international Arma 3 semi-milsim unit based in Europe, with members from all over the world.",
+            "sameAs": [
+                "https://youtube.com/@taskforceomega",
+                "https://discord.gg/FuwCrJF",
+                "https://twitch.tv/taskforceomega",
+                "https://steamcommunity.com/groups/taskforceomega"
+            ]
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- Dust particles -->
+<div class="dust-container" id="dustContainer"></div>
+
+
+<!-- ================================================
+     NAVIGATION
+================================================ -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="tfo-emoji.png" alt="Task Force Omega Logo" class="logo-image">
+                <div class="logo-text">Task Force Omega</div>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="donate.html" class="nav-link">Donate</a>
+            <a href="shop.html" class="nav-link shop-link" data-default="Shop" data-hover="Coming soon">Shop</a>
+            <a href="join-us.html" class="nav-link highlight">How to join</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================================================
+     MAIN WRAPPER
+================================================ -->
+<div class="wrapper">
+
+    <!-- Hero — YouTube background, autoplay muted -->
+    <section class="hero-section">
+        <div class="video-background">
+            <iframe
+                    title="Task Force Omega — Unit Showcase"
+                    src="https://www.youtube.com/embed/Ne2mgo9onow?autoplay=1&mute=1&loop=1&playlist=Ne2mgo9onow&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Together we prevail</h1>
+            <div class="accent-line"></div>
+            <p class="hero-tagline">European ARMA 3 tactical operations unit</p>
+        </div>
+    </section>
+
+
+    <!-- ================================================
+         CONTENT WRAPPER
+    ================================================ -->
+    <div class="content-wrapper">
+
+        <!-- Info cards -->
+        <section class="info-cards">
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-server"></i></div>
+                <h3>In-House</h3>
+                <p>Self-hosted server with multiple modlists</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+                <h3>CET Zone</h3>
+                <p>Operations scheduled GMT+1 timezone</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Regular Ops</h3>
+                <p>Thursdays & Sundays main missions</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-users"></i></div>
+                <h3>Global Team</h3>
+                <p>Members from around the world</p>
+            </div>
+        </section>
+
+
+        <!-- Gallery preview — update imgs/ paths as needed -->
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imgs/2.jpg" alt="Task Force Omega Naval Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="imgs/1.png" alt="Task Force Omega Special Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="imgs/3.jpg" alt="Task Force Omega Night Operations">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Stats bar -->
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-value">1hr</span>
+                <span class="stat-label">Training</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">2</span>
+                <span class="stat-label">Weekly Ops</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">Community</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">500+</span>
+                <span class="stat-label">Operations Completed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">15+</span>
+                <span class="stat-label">Countries Represented</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">5+</span>
+                <span class="stat-label">Years Active</span>
+            </div>
+        </div>
+
+
+        <!-- About Us -->
+        <section class="content-section">
+            <div class="section-label">
+                <h2>About Us</h2>
+                <p class="subtitle">Who we are</p>
+            </div>
+            <div class="section-content">
+                <p>Usually referred as TFO, Task Force Omega is an international Arma 3 semi-milsim unit based in Europe, but with members from all over the world, with a chill and friendly community. Although we like to joke around and have fun, a more serious and focused gameplay is asked during ops. We welcome everyone, from new to experienced players. Outside ops, we like to play many other games or game-modes together</p>
+                <p><em>(Antistasi, Mike Force, DCS, Ready or Not, Ground Branch, Insurgency...).</em></p>
+                <p>We focus on semi-serious operations that range from SpecOps to conventional military units. Our priority is creating a great mixture between fun and serious gameplay, while also being able to grow in personal skills.</p>
+            </div>
+        </section>
+
+
+        <!-- What We Offer -->
+        <section class="content-section">
+            <div class="section-label">
+                <h2>What We Offer</h2>
+                <p class="subtitle">Our infrastructure</p>
+            </div>
+            <div class="section-content">
+                <p>Our campaigns are custom-made by our mission-makers, which themes can vary from special operations to (un)conventional warfare, Star Wars, Vietnam, SCP, Cold War, Halo and more <i>(all era, all factions, real life based or fictional)</i>. Depending on the mission, various supports can be available <i>(JTAC, CAS, Heli, Armor, Artillery, Sniper...)</i>.</p>
+                <p>Our missions are typically on Thursday and Sunday. We often play together on other days and games as well, building a strong community beyond just scheduled operations.</p>
+                <p>All new players are required to complete our Basic Combat Training, which introduce Arma/mods mechanics and how the unit operate. We do not request a full time attendance, life comes first, but a minimum per month is asked in order to give everyone the best experience possible ! We do not forbid people from having multiple units, as long as it doesn't interfere with TFO's missions.</p>
+            </div>
+        </section>
+
+
+        <!-- CTA -->
+        <div class="cta-container">
+            <h2>Ready to Join the Fight?</h2>
+            <p>Join our Discord server and start your journey with Task Force Omega</p>
+            <a href="join-us.html" class="btn-discord">Get Started</a>
+        </div>
+
+
+        <!-- Social links — update URLs as needed -->
+        <section class="social-section">
+            <h2>Join Our Channels</h2>
+            <div class="social-icons">
+                <a href="https://youtube.com/@taskforceomega" target="_blank" class="social-icon youtube" title="YouTube" aria-label="Task Force Omega on YouTube">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="https://discord.gg/FuwCrJF" target="_blank" class="social-icon discord" title="Discord" aria-label="Join our Discord server">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitch.tv/taskforceomega" target="_blank" class="social-icon twitch" title="Twitch" aria-label="Task Force Omega on Twitch">
+                    <i class="fab fa-twitch" aria-hidden="true"></i>
+                </a>
+                <a href="https://steamcommunity.com/groups/taskforceomega" target="_blank" class="social-icon steam" title="Steam" aria-label="Task Force Omega Steam group">
+                    <i class="fab fa-steam" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================================================
+             FLAGS SECTION
+        ================================================ -->
+        <section class="international-section">
+            <h2>Task Force Omega International</h2>
+            <div class="team-photo">
+                <img src="imgs/team.jpg" alt="Task Force Omega Team Photo">
+            </div>
+            <div class="flags-container">
+                <img src="flags/nl.png" alt="Netherlands" class="flag-icon">
+                <img src="flags/fr.png" alt="France" class="flag-icon">
+                <img src="flags/us.png" alt="USA" class="flag-icon">
+                <img src="flags/tr.png" alt="Turkey" class="flag-icon">
+                <!--<img src="flags/gb.png" alt="United Kingdom" class="flag-icon">-->
+                <img src="flags/de.png" alt="Germany" class="flag-icon">
+                <!--<img src="flags/ch.png" alt="Switzerland" class="flag-icon">-->
+                <img src="flags/cn.png" alt="China" class="flag-icon">
+                <img src="flags/be.png" alt="Belgium" class="flag-icon">
+                <!--<img src="flags/pl.png" alt="Poland" class="flag-icon">-->
+                <img src="flags/gr.png" alt="Greece" class="flag-icon">
+                <img src="flags/sk.png" alt="Slovakia" class="flag-icon">
+                <img src="flags/ph.png" alt="Philippines" class="flag-icon">
+                <!--<img src="flags/ua.png" alt="Ukraine" class="flag-icon">-->
+                <img src="flags/se.png" alt="Sweden" class="flag-icon">
+                <img src="flags/no.png" alt="Norway" class="flag-icon">
+                <img src="flags/fi.png" alt="Finland" class="flag-icon">
+                <img src="flags/cz.png" alt="Czech Republic" class="flag-icon">
+                <img src="flags/th.png" alt="Thailand" class="flag-icon">
+                <img src="flags/dk.png" alt="Denmark" class="flag-icon">
+                <img src="flags/ro.png" alt="Romania" class="flag-icon">
+            </div>
+        </section>
+
+    </div>
+    <!-- End Content Wrapper -->
+
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-tagline">Task Force Omega &copy; 2021–2026 | <a href="legal.html">Legal Notices</a></p>
+    </footer>
+
+</div>
+<!-- End Main Wrapper -->
+
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script>
+    // Dust particles
+    const dustContainer = document.getElementById('dustContainer');
+    for (let i = 0; i < 50; i++) {
+        const dust = document.createElement('div');
+        dust.className = 'dust';
+        dust.style.left = Math.random() * 100 + '%';
+        dust.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        dust.style.animationDelay = Math.random() * 5 + 's';
+        dustContainer.appendChild(dust);
+    }
+
+    // Flag shuffle — randomised
+    function shuffleFlags() {
+        const container = document.querySelector('.flags-container');
+        const flags = Array.from(container.children);
+
+        const nlFlag = flags.find(f => f.src.includes('nl.png'));
+        const frFlag = flags.find(f => f.src.includes('fr.png'));
+        const rest   = flags.filter(f => !f.src.includes('nl.png') && !f.src.includes('fr.png'));
+
+        for (let i = rest.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [rest[i], rest[j]] = [rest[j], rest[i]];
+        }
+
+        container.innerHTML = '';
+        if (nlFlag) container.appendChild(nlFlag);
+        if (frFlag) container.appendChild(frFlag);
+        rest.forEach(f => container.appendChild(f));
+    }
+
+    // Shop Easter egg
+    function setupShopEasterEgg() {
+        const shopLink = document.querySelector('.shop-link');
+        if (!shopLink) return;
+
+        const defaultText = shopLink.dataset.default || 'Shop';
+        const hoverText   = shopLink.dataset.hover   || 'Coming soon';
+        let clicks = 0;
+
+        shopLink.addEventListener('mouseenter', () => {
+            if (clicks === 0) shopLink.textContent = hoverText;
+        });
+        shopLink.addEventListener('mouseleave', () => {
+            if (clicks === 0) shopLink.textContent = defaultText;
+        });
+        shopLink.addEventListener('click', (e) => {
+            clicks++;
+            if (clicks === 1) {
+                e.preventDefault();
+                shopLink.textContent = 'Coming soon';
+                shopLink.classList.add('shop-primed');
+            } else if (clicks === 2) {
+                e.preventDefault();
+                shopLink.textContent = 'COMING SOON';
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        shuffleFlags();
+        setupShopEasterEgg();
+    });
+
+    // Random footer tagline
+    const taglines = [
+        'We came for Arma, we stayed for the Discord drama',
+        'Six years of Zeus-induced trauma',
+        'The helicopter was never coming',
+        'Internationally dysfunctional since 2021',
+        'CAS requested. CAS denied. As always.',
+        'Friendship forged in friendly fire',
+        'Not affiliated with any real military. Unfortunately.',
+        'We read the OPORD. Sometimes.',
+        'No op was ever cancelled. It was just... postponed indefinitely.',
+        'Server uptime: better than our attendance rate'
+    ];
+    const tagline = taglines[Math.floor(Math.random() * taglines.length)];
+    document.getElementById('footer-tagline').innerHTML =
+        'Task Force Omega &copy; 2021\u20132026 | ' + tagline + ' | <a href="legal.html">Legal Notices</a>';
+</script>
+
+</body>
+</html>
