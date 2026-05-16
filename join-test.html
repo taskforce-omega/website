@@ -1,174 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#862021">
     <title>Signup — Task Force Omega</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        /* ── FORM STYLES ── */
-        .signup-form { display: flex; flex-direction: column; gap: 2rem; }
 
-        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    <link rel="shortcut icon" type="image/png" href="assets/tfo-emoji.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .form-group label {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text);
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Apply to join Task Force Omega, an international Arma 3 semi-milsim unit. Fill out the recruitment form and start your journey with TFO.">
+    <link rel="canonical" href="https://taskforceomega.eu/signup.html">
+
+    <meta property="og:site_name" content="Task Force Omega">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taskforceomega.eu/signup.html">
+    <meta property="og:title" content="Join Task Force Omega — Recruitment Form">
+    <meta property="og:description" content="Apply to join TFO. Fill out our recruitment form and take your first step into the unit.">
+    <meta property="og:image" content="https://taskforceomega.eu/assets/img/og/og-signup.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join Task Force Omega — Recruitment Form">
+    <meta name="twitter:description" content="Apply to join TFO. Fill out our recruitment form and take your first step into the unit.">
+    <meta name="twitter:image" content="https://taskforceomega.eu/assets/img/og/og-signup.jpg">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Task Force Omega",
+            "alternateName": "TFO",
+            "url": "https://taskforceomega.eu",
+            "logo": "https://taskforceomega.eu/assets/tfo-emoji.png",
+            "description": "Task Force Omega is an international Arma 3 semi-milsim unit based in Europe, with members from all over the world.",
+            "sameAs": [
+                "https://youtube.com/@taskforceomega",
+                "https://discord.gg/FuwCrJF",
+                "https://twitch.tv/taskforceomega",
+                "https://steamcommunity.com/groups/taskforceomega"
+            ]
         }
-
-        .form-group .hint {
-            font-size: 0.82rem;
-            color: var(--text-dim);
-            margin-bottom: 0.3rem;
-            line-height: 1.5;
-        }
-
-        .form-group input[type="text"] {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            color: var(--text);
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.95rem;
-            transition: border-color 0.2s ease;
-            outline: none;
-        }
-
-        .form-group input[type="text"]:focus {
-            border-color: rgba(134, 32, 33, 0.6);
-        }
-
-        .radio-group { display: flex; flex-direction: column; gap: 0.6rem; }
-
-        .radio-option {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            cursor: pointer;
-            padding: 0.6rem 0.9rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: rgba(255,255,255,0.02);
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-        }
-
-        .radio-option:hover {
-            border-color: rgba(134, 32, 33, 0.4);
-            background: rgba(134, 32, 33, 0.05);
-            color: var(--text);
-        }
-
-        .radio-option input[type="radio"] { display: none; }
-
-        .radio-option .radio-dot {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 2px solid var(--text-dim);
-            flex-shrink: 0;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .radio-option input[type="radio"]:checked + .radio-dot {
-            border-color: var(--red);
-            background: var(--red);
-            box-shadow: 0 0 8px rgba(134, 32, 33, 0.5);
-        }
-
-        .radio-option:has(input:checked) {
-            border-color: rgba(134, 32, 33, 0.5);
-            background: rgba(134, 32, 33, 0.08);
-            color: var(--text);
-        }
-
-        .form-divider {
-            border: none;
-            border-top: 1px solid rgba(134, 32, 33, 0.2);
-            margin: 0.5rem 0;
-        }
-
-        .form-section-title {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--red);
-            font-weight: 600;
-        }
-
-        .btn-submit {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            background: linear-gradient(90deg, var(--red), rgba(255,255,255,0.9));
-            color: var(--text);
-            padding: 0.9rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            font-family: 'Space Grotesk', sans-serif;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(134, 32, 33, 0.4);
-            align-self: flex-start;
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 50px rgba(134, 32, 33, 0.6);
-        }
-
-        .btn-submit:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .form-feedback {
-            display: none;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .form-feedback.success {
-            display: block;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: #86efac;
-        }
-
-        .form-feedback.error {
-            display: block;
-            background: rgba(134, 32, 33, 0.1);
-            border: 1px solid rgba(134, 32, 33, 0.3);
-            color: #fca5a5;
-        }
-    </style>
+    </script>
 </head>
 <body>
 
-<!-- Dust particles -->
 <div class="dust-container" id="dustContainer"></div>
 
-<!-- Nav -->
 <nav>
     <div class="nav-container">
         <div class="nav-left">
             <a href="index.html" class="logo-link">
-                <img src="assets/logo.png" alt="TFO Logo" class="logo-image" />
-                <span class="logo-text">TASK FORCE OMEGA</span>
+                <img src="assets/tfo-emoji.png" alt="Task Force Omega Logo" class="logo-image">
+                <div class="logo-text">Task Force Omega</div>
             </a>
         </div>
         <div class="nav-menu">
@@ -182,20 +74,18 @@
 <div class="wrapper">
     <div class="content-wrapper">
 
-        <!-- Hero -->
         <div class="hero-section-1">
             <div class="hero-content">
                 <h1>Signup</h1>
                 <div class="accent-line"></div>
-                <p>Welcome to Task Force Omega. Be honest — these questions give you a good idea of what we expect and what experience we can provide.</p>
+                <p>A few honest questions before you join.<br> Your answers help us place you right and set the right expectations on both sides.</p>
             </div>
         </div>
 
-        <!-- Form section -->
         <div class="content-section">
             <div class="section-label">
                 <h2>Application</h2>
-                <span class="subtitle">All fields required</span>
+                <span class="subtitle">All fields are required unless marked optional</span>
             </div>
             <div class="section-content">
 
@@ -203,148 +93,155 @@
 
                 <form class="signup-form" id="signupForm">
 
-                    <!-- SECTION: Identity -->
-                    <span class="form-section-title">Identity</span>
+                    <!-- Identity -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Who are you?</span>
 
-                    <div class="form-group">
-                        <label for="discordName">Discord name <span style="color:var(--red)">*</span></label>
-                        <input type="text" id="discordName" name="discordName" placeholder="Username (e.g. Chaos)" required />
-                    </div>
+                        <div class="form-group">
+                            <label for="discordName">Discord username <span class="required-star">*</span></label>
+                            <input type="text" id="discordName" name="discordName" placeholder="e.g. SmartyPants" required />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="timezone">Timezone <span style="color:var(--red)">*</span></label>
-                        <input type="text" id="timezone" name="timezone" placeholder="e.g. UTC+2, EST, CEST…" required />
-                    </div>
+                        <div class="form-group">
+                            <label for="timezone">Your timezone <span class="required-star">*</span></label>
+                            <input type="text" id="timezone" name="timezone" placeholder="e.g. UTC+2, EST, CEST" required />
+                        </div>
 
-                    <div class="form-group">
-                        <label>Age group <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="age" value="10-15" required /><span class="radio-dot"></span>10–15</label>
-                            <label class="radio-option"><input type="radio" name="age" value="16-20" /><span class="radio-dot"></span>16–20</label>
-                            <label class="radio-option"><input type="radio" name="age" value="21-25" /><span class="radio-dot"></span>21–25</label>
-                            <label class="radio-option"><input type="radio" name="age" value="26-30" /><span class="radio-dot"></span>26–30</label>
-                            <label class="radio-option"><input type="radio" name="age" value="30+" /><span class="radio-dot"></span>30+</label>
+                        <div class="form-group">
+                            <label>How old are you? <span class="required-star">*</span></label>
+                            <div id="ageWarning" class="age-warning">
+                                <strong>Enlistment denied.</strong><br>
+                                <span>Task Force Omega does not accept recruits under 16. Come back when you're old enough to follow orders.</span>
+                            </div>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="age" value="10-15" required /><span class="radio-dot"></span>10–15</label>
+                                <label class="radio-option"><input type="radio" name="age" value="16-20" /><span class="radio-dot"></span>16–20</label>
+                                <label class="radio-option"><input type="radio" name="age" value="21-25" /><span class="radio-dot"></span>21–25</label>
+                                <label class="radio-option"><input type="radio" name="age" value="26-30" /><span class="radio-dot"></span>26–30</label>
+                                <label class="radio-option"><input type="radio" name="age" value="30+" /><span class="radio-dot"></span>30+</label>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="form-divider" />
+                    <!-- Availability -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Availability</span>
+                        <p class="form-hint">We run operations twice a week — Thursday and Sunday evenings.<br> We don't expect you at every single op, but we do expect you to show up when you're available.</p>
 
-                    <!-- SECTION: Availability -->
-                    <span class="form-section-title">Availability</span>
-                    <p class="hint" style="color:var(--text-dim);font-size:0.85rem">We run two ops per week — Thursday and Sunday evenings. We don't expect you at every op, but do require you to join when you're available.</p>
+                        <div class="form-group">
+                            <label>Are you free on Sunday evenings, 7 to 10 PM CEST? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="availSunday" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="availSunday" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label>Available Sunday evenings 7pm–10pm CEST? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="availSunday" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="availSunday" value="No" /><span class="radio-dot"></span>No</label>
+                        <div class="form-group">
+                            <label>Are you free on Thursday evenings, 7 to 10 PM CEST? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="availThursday" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="availThursday" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Available Thursday evenings 7pm–10pm CEST? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="availThursday" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="availThursday" value="No" /><span class="radio-dot"></span>No</label>
+                    <!-- Mods -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Mods</span>
+                        <p class="form-hint">We run several modlists averaging 20 to 30 mods each.<br> You will need to install and keep them updated, all are provided.</p>
+
+                        <div class="form-group">
+                            <label>Are you comfortable managing multiple modlists? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="okMods" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="okMods" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="form-divider" />
+                    <!-- Orders -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Chain of command</span>
+                        <p class="form-hint">TFO is a community first — everyone is a friend. That said, following orders during missions is non-negotiable.<br> It keeps operations running smoothly and keeps everyone alive.</p>
 
-                    <!-- SECTION: Mods -->
-                    <span class="form-section-title">Mods</span>
-                    <p class="hint" style="color:var(--text-dim);font-size:0.85rem">We use multiple modlists (avg 20–30 mods): ACRE2, ACE, KAT, RHS, CUP, 3CB, OFP.</p>
-
-                    <div class="form-group">
-                        <label>OK with installing multiple modlists? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="okMods" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="okMods" value="No" /><span class="radio-dot"></span>No</label>
+                        <div class="form-group">
+                            <label>Do you have difficulty taking and executing orders? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="orders" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="orders" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="form-divider" />
+                    <!-- Experience -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Experience</span>
+                        <p class="form-hint">Everyone goes through Basic Combat Training regardless of background.<br> We want all recruits starting from the same baseline — no exceptions.</p>
 
-                    <!-- SECTION: Orders -->
-                    <span class="form-section-title">Orders</span>
-                    <p class="hint" style="color:var(--text-dim);font-size:0.85rem">In TFO we consider everyone a friend, but require everyone to listen to orders for mission flow and successful execution.</p>
+                        <div class="form-group">
+                            <label>Have you served in a milsim unit before? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="milsim" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="milsim" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label>Problems listening to and carrying out orders? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="orders" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="orders" value="No" /><span class="radio-dot"></span>No</label>
+                        <div class="form-group">
+                            <label>How would you describe your Arma 3 experience? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="armaExp" value="None — new to the game" required /><span class="radio-dot"></span>New to the game entirely</label>
+                                <label class="radio-option"><input type="radio" name="armaExp" value="Some Vanilla — never used mods" /><span class="radio-dot"></span>Played vanilla, never used mods</label>
+                                <label class="radio-option"><input type="radio" name="armaExp" value="Experienced — know ACE and mods" /><span class="radio-dot"></span>Experienced — familiar with ACE and modded play</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Do you have any issues using Push-to-Talk in TeamSpeak? <span class="required-star">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="ptt" value="Yes" required /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="ptt" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="form-divider" />
+                    <!-- How did you find us -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">How or where did you hear about us?</span>
 
-                    <!-- SECTION: Experience -->
-                    <span class="form-section-title">Experience</span>
-                    <p class="hint" style="color:var(--text-dim);font-size:0.85rem">Even experienced players go through BCT — we want everyone at the same starting level.</p>
-
-                    <div class="form-group">
-                        <label>Experience with previous milsim units? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="milsim" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="milsim" value="No" /><span class="radio-dot"></span>No</label>
+                        <div class="form-group">
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="source" value="Discord" required /><span class="radio-dot"></span>Discord</label>
+                                <label class="radio-option"><input type="radio" name="source" value="Reddit" /><span class="radio-dot"></span>Reddit</label>
+                                <label class="radio-option"><input type="radio" name="source" value="Steam" /><span class="radio-dot"></span>Steam</label>
+                                <label class="radio-option"><input type="radio" name="source" value="YouTube" /><span class="radio-dot"></span>YouTube</label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Arma 3 experience level? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="armaExp" value="None — new to the game" required /><span class="radio-dot"></span>None — I'm new to the game</label>
-                            <label class="radio-option"><input type="radio" name="armaExp" value="Some Vanilla — never used mods" /><span class="radio-dot"></span>Some Vanilla, never used mods</label>
-                            <label class="radio-option"><input type="radio" name="armaExp" value="Experienced — know ACE and mods" /><span class="radio-dot"></span>Pretty experienced, know ACE and other mods</label>
+                    <!-- Trial Op -->
+                    <div class="form-section-block">
+                        <span class="form-section-title">Trial op <span class="form-section-optional">— optional</span></span>
+                        <p class="form-hint">Want to jump in before committing? You're welcome to sit in on a live op as a guest.<br> No pressure, no expectations — just come and see if TFO is the right fit.</p>
+
+                        <div class="form-group">
+                            <label>Would you like to join as a guest next Thursday at 19:30 CEST?</label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="testThursday" value="Yes" /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="testThursday" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label>Problem with PTT function in TeamSpeak? <span style="color:var(--red)">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="ptt" value="Yes" required /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="ptt" value="No" /><span class="radio-dot"></span>No</label>
-                        </div>
-                    </div>
-
-                    <hr class="form-divider" />
-
-                    <!-- SECTION: How did you find us -->
-                    <span class="form-section-title">How did you find us?</span>
-
-                    <div class="form-group">
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="source" value="Discord" required /><span class="radio-dot"></span>Discord</label>
-                            <label class="radio-option"><input type="radio" name="source" value="Reddit" /><span class="radio-dot"></span>Reddit</label>
-                            <label class="radio-option"><input type="radio" name="source" value="Steam" /><span class="radio-dot"></span>Steam</label>
-                            <label class="radio-option"><input type="radio" name="source" value="Youtube" /><span class="radio-dot"></span>Youtube</label>
-                        </div>
-                    </div>
-
-                    <hr class="form-divider" />
-
-                    <!-- SECTION: Test ops -->
-                    <span class="form-section-title">Test Ops (optional)</span>
-
-                    <div class="form-group">
-                        <label>Join next Thursday as a test? (19:30 CEST)</label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="testThursday" value="Yes" /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="testThursday" value="No" /><span class="radio-dot"></span>No</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Join next Sunday as a test? (19:30 CEST)</label>
-                        <div class="radio-group">
-                            <label class="radio-option"><input type="radio" name="testSunday" value="Yes" /><span class="radio-dot"></span>Yes</label>
-                            <label class="radio-option"><input type="radio" name="testSunday" value="No" /><span class="radio-dot"></span>No</label>
+                        <div class="form-group">
+                            <label>Would you like to join as a guest next Sunday at 19:30 CEST?</label>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="testSunday" value="Yes" /><span class="radio-dot"></span>Yes</label>
+                                <label class="radio-option"><input type="radio" name="testSunday" value="No" /><span class="radio-dot"></span>No</label>
+                            </div>
                         </div>
                     </div>
 
                     <button type="submit" class="btn-submit" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Submit Application
+                        Submit Application
                     </button>
 
                 </form>
@@ -354,13 +251,11 @@
     </div>
 </div>
 
-<!-- Footer -->
 <footer>
-    <p>© 2025 Task Force Omega · <a href="legal.html" style="color:var(--text-dim)">Legal</a></p>
+    <p id="footer-tagline">Task Force Omega &copy; 2021–2026 | <a href="legal.html">Legal Notices</a></p>
 </footer>
 
 <script>
-    // Dust
     const dc = document.getElementById('dustContainer');
     for (let i = 0; i < 15; i++) {
         const d = document.createElement('div');
@@ -369,13 +264,12 @@
         dc.appendChild(d);
     }
 
-    // Form submit
     document.getElementById('signupForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
         const feedback = document.getElementById('formFeedback');
         btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+        btn.textContent = 'Sending...';
 
         const fd = new FormData(this);
         const data = Object.fromEntries(fd.entries());
@@ -386,22 +280,35 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
-
             if (res.ok) {
                 feedback.className = 'form-feedback success';
-                feedback.textContent = '✓ Application received. Check #recruitment-center on Discord for next steps.';
+                feedback.textContent = 'Application received. Head to #recruitment-center on Discord for next steps.';
                 this.reset();
             } else {
                 throw new Error('Server error');
             }
         } catch {
             feedback.className = 'form-feedback error';
-            feedback.textContent = '✗ Something went wrong. Try again or contact us on Discord.';
+            feedback.textContent = 'Something went wrong. Try again or reach out to us directly on Discord.';
         }
 
         btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Application';
+        btn.textContent = 'Submit Application';
         feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    document.querySelectorAll('input[name="age"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const warning = document.getElementById('ageWarning');
+            const submitBtn = document.getElementById('submitBtn');
+            if (this.value === '10-15') {
+                warning.style.display = 'block';
+                submitBtn.disabled = true;
+            } else {
+                warning.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
     });
 </script>
 
