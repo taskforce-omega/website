@@ -17,14 +17,14 @@
 
 ## Stack
 
-| Layer | Tech |
-|---|---|
-| Frontend | HTML5, CSS3, Vanilla JS |
-| Fonts | Space Grotesk (Google Fonts) |
-| Icons | Font Awesome 6 |
-| Hosting | Netlify |
-| Functions | Netlify Serverless (Node.js) |
-| Notifications | Discord Webhooks |
+| Layer         | Tech                         |
+|---------------|------------------------------|
+| Frontend      | HTML5, CSS3, Vanilla JS      |
+| Fonts         | Space Grotesk (Google Fonts) |
+| Icons         | Font Awesome 6               |
+| Hosting       | Netlify                      |
+| Functions     | Netlify Serverless (Node.js) |
+| Notifications | Discord Webhooks             |
 
 ---
 
@@ -72,8 +72,8 @@ Handles POST requests from the recruitment form and forwards a formatted embed t
 
 Configured in the Netlify dashboard. Never commit `.env` files.
 
-| Variable | Description |
-|---|---|
+| Variable                 | Description                                        |
+|--------------------------|----------------------------------------------------|
 | `DISCORD_WEBHOOK_SIGNUP` | Discord webhook URL for signup embed notifications |
 
 ---
