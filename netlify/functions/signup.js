@@ -52,7 +52,7 @@ exports.handler = async function(event) {
             { name: 'Source', value: data.source || '—', inline: false },
 
             // — Trial op —
-            { name: '\u200B', value: '**Trial op**', inline: false },
+            { name: '\u200B', value: '**Trial OP**', inline: false },
             { name: 'Thursday 19:30', value: yn(data.testThursday), inline: true },
             { name: 'Sunday 19:30',   value: yn(data.testSunday),   inline: true },
             { name: '\u200B',         value: '\u200B',              inline: true },

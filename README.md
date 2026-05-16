@@ -28,7 +28,7 @@
 
 ---
 
-## Project Structure
+## Project structure
 
 ~~~
 taskforceomega/
